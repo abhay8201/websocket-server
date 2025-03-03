@@ -129,8 +129,8 @@ io.on("connection", (socket) => {
   });
 });
 
-// Start Server
-const PORT = 3000;
+// Start Server with Dynamic Port for Render
+const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
-  console.log(`🚀 WebSocket Server running on ws://localhost:${PORT}`);
+  console.log(`🚀 WebSocket Server running on port ${PORT}`);
 });
