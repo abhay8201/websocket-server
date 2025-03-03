@@ -12,39 +12,39 @@ const io = socketIo(server, {
   },
 });
 
-// MySQL Database Connection
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "wavify",
-});
-
-db.connect((err) => {
-  if (err) {
-    console.error("MySQL Connection Error:", err);
-  } else {
-    console.log("✅ Connected to MySQL Database");
-  }
-});
-
-// // Updated database credentials
+// // MySQL Database Connection
 // const db = mysql.createConnection({
-//   host: "sql101.infinityfree.com", // Your InfinityFree MySQL hostname
-//   user: "if0_37639618", // Your MySQL username
-//   password: "kVpvRxWndc", // Replace with your actual password
-//   database: "if0_37639618_wavify", // Your MySQL database name
-//   port: 3306, // Default MySQL port (optional)
+//   host: "localhost",
+//   user: "root",
+//   password: "",
+//   database: "wavify",
 // });
 
-// // Attempt to connect to the database
 // db.connect((err) => {
 //   if (err) {
-//     console.error("❌ MySQL Connection Error:", err);
+//     console.error("MySQL Connection Error:", err);
 //   } else {
-//     console.log("✅ Connected to Online MySQL Database");
+//     console.log("✅ Connected to MySQL Database");
 //   }
 // });
+
+// Updated database credentials
+const db = mysql.createConnection({
+  host: "sql12.freesqldatabase.com", // Your InfinityFree MySQL hostname
+  user: "sql12765609", // Your MySQL username
+  password: "5lxu7qlE3W", // Replace with your actual password
+  database: "sql12765609", // Your MySQL database name
+  port: 3306, // Default MySQL port (optional)
+});
+
+// Attempt to connect to the database
+db.connect((err) => {
+  if (err) {
+    console.error("❌ MySQL Connection Error:", err);
+  } else {
+    console.log("✅ Connected to Online MySQL Database");
+  }
+});
 
 io.on("connection", (socket) => {
   console.log("🔗 New client connected:", socket.id);
