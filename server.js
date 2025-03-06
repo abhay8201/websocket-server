@@ -30,11 +30,11 @@ const io = socketIo(server, {
 
 // Updated database credentials
 const db = mysql.createConnection({
-  host: "sql12.freesqldatabase.com", // Your InfinityFree MySQL hostname
-  user: "sql12765609", // Your MySQL username
-  password: "5lxu7qlE3W", // Replace with your actual password
-  database: "sql12765609", // Your MySQL database name
-  port: 3306, // Default MySQL port (optional)
+  host: "mysql-1aed90dd-abhayrana9608-ed47.l.aivencloud.com", // New MySQL hostname
+  user: "avnadmin", // New MySQL username
+  password: "AVNS_r1TRf8y8dTxjJbdgbuS", // New password
+  database: "wavify", // Replace with your actual database name
+  port: 18546, // New MySQL port
 });
 
 // Attempt to connect to the database
